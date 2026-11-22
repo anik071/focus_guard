@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   String emergencyPin = '1234';
   int emergencyDuration = 10;
 
-  final List> presetApps = [
+  final List <Map<String, String>> presetApps = [
     {'name': 'Instagram', 'pkg': 'com.instagram.android'},
     {'name': 'Facebook', 'pkg': 'com.facebook.katana'},
     {'name': 'YouTube', 'pkg': 'com.google.android.youtube'},
@@ -213,7 +213,7 @@ class _HomeScreenState extends State<HomeScreen> {
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              DropdownButtonFormField>(
+              DropdownButtonFormField<Map<String, String>>(
                 value: selectedApp,
                 decoration: const InputDecoration(
                   labelText: 'Select App',
@@ -408,7 +408,6 @@ class _HomeScreenState extends State<HomeScreen> {
           const SizedBox(height: 24),
 
           Row(
-            mainAxisAlignment: Main---------
             MainAxisAlignment.spaceBetween,
             children: [
               const Text('APP TIMERS & COOLDOWNS',
