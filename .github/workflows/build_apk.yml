@@ -31,9 +31,10 @@ jobs:
           cp -r android/app/src/main/* /tmp/backup_android/
           rm -rf android
           flutter create . --platforms=android --org com.example --project-name focus_guard
+          sed -i 's/id "org.jetbrains.kotlin.android" version "[^"]*"/id "org.jetbrains.kotlin.android" version "1.9.24"/g' android/settings.gradle
           rm -rf android/app/src/main/java
           cp -r /tmp/backup_android/* android/app/src/main/
-
+          
       - name: Install Dependencies
         run: flutter pub get
 
