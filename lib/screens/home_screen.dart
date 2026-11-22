@@ -405,10 +405,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               )),
 
-          const SizedBox(height: 24),
+                    const SizedBox(height: 24),
 
           Row(
-            MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text('APP TIMERS & COOLDOWNS',
                   style: TextStyle(
@@ -417,6 +417,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   icon: const Icon(Icons.add), onPressed: _addAppLimitDialog),
             ],
           ),
+
           if (appLimits.isEmpty)
             const Padding(
               padding: EdgeInsets.symmetric(vertical: 16),
